@@ -445,26 +445,21 @@ body {
 
 .dropdown-container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  position: relative; /* This is needed for absolute positioning of .dropbtn */
 }
 
 .dropdown {
   display: inline-block;
-  background-color: #1c1c1c;
   color: white;
-  border: 2px solid white;
-  border-radius: 10px;
   cursor: pointer;
   transition: 0.5s;
-  border-image-source: linear-gradient(45deg, grey, black, grey, black, grey, black);
-  border-image-slice: 1;
   animation: menuBtnPop 0.5s ease-in-out;
 }
 
 .dropdown:hover {
   animation: menuBtnPop 0.5s ease-in-out infinite;
-  border: 4px solid whitesmoke;
 }
 
 .dropbtn {
@@ -476,15 +471,18 @@ body {
   padding: 8px 16px;
   cursor: pointer;
   transition: 0.5s;
-  border-image-source: linear-gradient(45deg, grey, black, grey, black, grey, black);
+  border-image-source: linear-gradient(45deg, orange, black, orange, black, orange, black);
   border-image-slice: 1;
   animation: menuBtnPop 0.5s ease-in-out;
+  top: 100%; /* This will position the button directly under the .gamesearchbtn */
+  right: 0; /* This will align the button to the right of .gamesearchbtn */
+  margin-top: 5px; /* This will add 5px of space above the button */
 }
 
 .dropbtn:hover {
   animation: menuBtnPop 0.5s ease-in-out infinite;
-  border: 4px solid whitesmoke;
   color: red;
+  border: 4px solid whitesmoke;
 }
 
 
@@ -517,3 +515,50 @@ body {
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: yellow;}
+
+.gamesearchbar {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 1px 30px;
+  font-size: 16px;
+  background-color: #1c1c1c;
+  color: white;
+  transition: 0.5s;
+  border-image-source: linear-gradient(45deg, grey, black, grey, black, grey, black);
+  border-image-slice: 1;
+  animation: menuBtnPop 0.5s ease-in-out;
+}
+
+.gamesearchbar:hover {
+  animation: menuBtnPop 0.5s ease-in-out infinite;
+  border: 4px solid whitesmoke;
+  color: red;
+}
+
+.gamesearchbtn {
+  display: inline-block;
+  background-color: #1c1c1c;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+  border-image-source: linear-gradient(45deg, lime, black, green, black, lime, black);
+  border-image-slice: 1;
+  animation: menuBtnPop 0.5s ease-in-out;
+  position: relative;
+}
+
+.gamesearchbtn:hover {
+  animation: menuBtnPop 0.5s ease-in-out infinite;
+  border: 4px solid whitesmoke;
+  color: red;
+}
+
+.gamesearchbar,
+.gamesearchbtn {
+  margin-right: 10px; /* This will add 10px of space to the right of these elements */
+}

@@ -65,15 +65,7 @@
                 historyoff.style.margin = 'auto';
                 historyoff.style.width = '50%';
                 historyoff.onclick = function() {
-                    while (document.body.firstChild) {
-                        document.body.removeChild(document.body.firstChild);
-                    }
-                    fetch('home.html')
-                        .then(response => response.text())
-                        .then(data => {
-                            document.body.innerHTML = data;
-                        })
-                        .catch(error => console.error('Error:', error));
+                    window.location.href = 'home.html';
                 };
 
                 document.body.appendChild(title);
