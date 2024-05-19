@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/menunav.js"></script>
+    <script src="js/homeMessages.js"></script>
     <link rel="icon" href="img/fakechromeicon.jpg">
 </head>
 <body>
@@ -15,24 +16,7 @@
     </div>
     <h1 id="top"><span class="floopy">Floopy</span> <span class="network">Network</span></h1>
     <p class="undertop">Welcome to Floopy Network.</p>
-    <img src="img/logo.jpg" alt="Logo" class="logo">
-    
-    
-    
-    
-    <script>
-
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const undertop = document.querySelector('.undertop');
-            const messages = ['Looking for games? Look here.', '#1 unblocked website.', 'Games in class? Be a bit sneaky.', 'Oh. Did I mention this website has TV?', 'Chromebooks are honestly bad.', 'Oh, you found this site. Welcome.', 'This is the new meta of unblocked games.', 'Created by a dumb 12 year old.', 'Teachers hate this website.', 'This website is not blocked by your school.'];
-
-            setInterval(() => {
-                const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-                undertop.textContent = randomMessage;
-            }, 2000);
-                    
-        });
-    </script>
+    <center><img src="img/logo.jpg" alt="Logo" class="logo"></center>
 
     <div class="menu">
         <p class="menu-label">Floopy Menu</p>

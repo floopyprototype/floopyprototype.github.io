@@ -43,7 +43,6 @@ body {
     background-color: #111111; /* This is a very dark gray, lighter than black */
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
 }
 
 ::selection {
@@ -58,6 +57,7 @@ body {
 }
 
 .undertop {
+    text-align: center;
     color: white;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de;
 }
@@ -561,4 +561,38 @@ body {
 .gamesearchbar,
 .gamesearchbtn {
   margin-right: 10px; /* This will add 10px of space to the right of these elements */
+}
+
+.choicegamebtn {
+  display: inline-block;
+  background-color: #1c1c1c;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 0px 0px;
+  border-image-source: linear-gradient(45deg, white, black, white, black, white, black);
+  border-image-slice: 1;
+}
+
+.gamediv {
+  display: inline-block;
+}
+
+.gamediv:hover {
+  display: inline-block;
+  animation: menuBtnPop 0.5s ease-in-out infinite;
+  color: red;
+}
+
+.gameundertext {
+  color: white;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de;
+  border: none;
+  background-color: transparent;
+  font-weight: bolder;
+  user-select: none;
+  text-align: center; /* Add this line */
 }

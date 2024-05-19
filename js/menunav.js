@@ -4,10 +4,14 @@ function injectHome() {
         .then(response => response.text())
         .then(data => {
             document.body.innerHTML = data;
-            Array.from(document.body.getElementsByTagName('script')).forEach(oldScript => {
+            Array.from(document.body.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
                 Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                if (oldScript.src) {
+                    newScript.src = oldScript.src;
+                } else {
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                }
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
         })
@@ -22,10 +26,14 @@ function injectGames() {
         .then(response => response.text())
         .then(data => {
             document.body.innerHTML = data;
-            Array.from(document.body.getElementsByTagName('script')).forEach(oldScript => {
+            Array.from(document.body.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
                 Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                if (oldScript.src) {
+                    newScript.src = oldScript.src;
+                } else {
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                }
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
         })
@@ -40,10 +48,14 @@ function injectApps() {
         .then(response => response.text())
         .then(data => {
             document.body.innerHTML = data;
-            Array.from(document.body.getElementsByTagName('script')).forEach(oldScript => {
+            Array.from(document.body.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
                 Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                if (oldScript.src) {
+                    newScript.src = oldScript.src;
+                } else {
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                }
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
         })
@@ -58,10 +70,14 @@ function injectFreeweb() {
         .then(response => response.text())
         .then(data => {
             document.body.innerHTML = data;
-            Array.from(document.body.getElementsByTagName('script')).forEach(oldScript => {
+            Array.from(document.body.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
                 Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                if (oldScript.src) {
+                    newScript.src = oldScript.src;
+                } else {
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                }
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
         })
@@ -76,10 +92,14 @@ function injectUnblockedWebsites() {
         .then(response => response.text())
         .then(data => {
             document.body.innerHTML = data;
-            Array.from(document.body.getElementsByTagName('script')).forEach(oldScript => {
+            Array.from(document.body.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
                 Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                if (oldScript.src) {
+                    newScript.src = oldScript.src;
+                } else {
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                }
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
         })
@@ -94,10 +114,14 @@ function injectTV() {
         .then(response => response.text())
         .then(data => {
             document.body.innerHTML = data;
-            Array.from(document.body.getElementsByTagName('script')).forEach(oldScript => {
+            Array.from(document.body.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
                 Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                if (oldScript.src) {
+                    newScript.src = oldScript.src;
+                } else {
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                }
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
         })
@@ -111,10 +135,14 @@ function injectSettings() {
         .then(response => response.text())
         .then(data => {
             document.body.innerHTML = data;
-            Array.from(document.body.getElementsByTagName('script')).forEach(oldScript => {
+            Array.from(document.body.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
                 Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                if (oldScript.src) {
+                    newScript.src = oldScript.src;
+                } else {
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                }
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
         })
@@ -129,10 +157,14 @@ function injectChangelog() {
         .then(response => response.text())
         .then(data => {
             document.body.innerHTML = data;
-            Array.from(document.body.getElementsByTagName('script')).forEach(oldScript => {
+            Array.from(document.body.querySelectorAll('script')).forEach(oldScript => {
                 const newScript = document.createElement('script');
                 Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                if (oldScript.src) {
+                    newScript.src = oldScript.src;
+                } else {
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                }
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
         })
