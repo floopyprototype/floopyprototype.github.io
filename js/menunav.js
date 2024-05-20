@@ -14,11 +14,16 @@ function injectHome() {
                 }
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             });
+
+            // Call the function that attaches the event listeners here
+            attachEventListeners();
         })
         .catch(error => {
             console.error(error);
         });
 }
+
+// Do the same for the injectGames and injectApps functions
 
 function injectGames() {
     document.body.innerHTML = '';

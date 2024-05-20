@@ -158,12 +158,71 @@
         </a>
     </div>
 
-    <div class="gamediv">
-        <a>
-            <button class="choicegamebtn"><img src="https://th.bing.com/th/id/OIP.5vXow_Z6IzzomCeIAljSTgAAAA?rs=1&pid=ImgDetMain&adlt=strict" alt="Game" width="150" height="150"></button>
-            <p class="gameundertext">1v1.lol</p>
-        </a>
+    <div class="gamediv" onclick="deleteGameDivs()">
+        <button class="choicegamebtn"><img src="https://th.bing.com/th/id/OIP.5vXow_Z6IzzomCeIAljSTgAAAA?rs=1&pid=ImgDetMain&adlt=strict" alt="Game" width="150" height="150"></button>
+        <p class="gameundertext">1v1.lol</p>
     </div>
+
+    <script>
+        function deleteGameDivs() {
+            const dropdownContainer = document.querySelector('.dropdown-container');
+            dropdownContainer.remove();
+
+            const gameSearchBtn = document.querySelector('.gamesearchbtn');
+            if (gameSearchBtn) {
+                gameSearchBtn.remove();
+            }
+
+            const gameSearchBar = document.querySelector('.gamesearchbar');
+            if (gameSearchBar) {
+                gameSearchBar.remove();
+            }
+
+            const floopy = document.querySelector('.floopy');
+            if (floopy) {
+                floopy.remove();
+            }
+
+            const network = document.querySelector('.network');
+            if (network) {
+                network.remove();
+            }
+
+            const undertop = document.querySelector('.undertop');
+            if (undertop) {
+                undertop.remove();
+            }
+
+            const deleteDiv = document.querySelector('.gamediv[onclick="deleteGameDivs()"]');
+            if (deleteDiv) {
+                const gameName = deleteDiv.querySelector('.gameundertext').textContent;
+                const h1 = document.createElement('h1');
+                h1.style.textAlign = 'center';
+                h1.textContent = gameName;
+                deleteDiv.parentNode.insertBefore(h1, deleteDiv.nextSibling);
+            }
+
+            const gamediv = document.querySelectorAll('.gamediv');
+            gamediv.forEach((div) => {
+                div.remove();
+            });
+
+            const frameContainer = document.createElement('div');
+            frameContainer.style.display = 'flex';
+            frameContainer.style.justifyContent = 'center';
+            frameContainer.style.alignItems = 'center';
+            frameContainer.style.width = '100vw';
+            frameContainer.style.height = '100vh';
+
+            const frame = document.createElement('iframe');
+            frame.src = 'https://www.1v1.lol';
+            frame.style.width = '800px';
+            frame.style.height = '800px';
+
+            frameContainer.appendChild(frame);
+            document.body.appendChild(frameContainer);
+        }
+    </script>
 
 
 
