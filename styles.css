@@ -596,3 +596,23 @@ body {
   user-select: none;
   text-align: center; /* Add this line */
 }
+
+.tvchoicebtn {
+  display: inline-block;
+  background-color: #1c1c1c;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 0px 0px;
+  border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
+  border-image-slice: 1;
+}
+
+.tvchoicebtn:hover {
+  animation: menuBtnPop 0.5s ease-in-out infinite;
+  border: 4px solid yellow;
+  color: red;
+}
