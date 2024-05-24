@@ -577,6 +577,11 @@ body {
   border-image-slice: 1;
 }
 
+.choicegamebtn:hover {
+  animation: menuBtnPop 0.5s ease-in-out infinite;
+  border: 4px solid yellow;
+}
+
 .gamediv {
   display: inline-block;
 }
